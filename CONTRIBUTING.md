@@ -158,6 +158,8 @@ pnpm exec vite
 
 Then open `http://localhost:5173/dev.html`. Opening `dev.html` straight from disk doesn't work, because browsers block module scripts on `file://` URLs.
 
+The page starts in popup mode. Open `http://localhost:5173/dev.html?mode=inline` to render the widget inside a 400×600 container instead (any other `mode` value falls back to popup). The links at the top switch modes, and the Open and Close buttons call `ChatCops.open()` and `ChatCops.close()`.
+
 To test with a real backend, build the packages first, then run the Express example:
 
 ```bash
